@@ -2,7 +2,7 @@
 
 const express = require('express'),
     router = express.Router(),//permite crear la ruta
-    Usuario = require('../models/tarjetas.model');
+    Tarjeta = require('../models/tarjetas.model');
 
 //Definir la ruta para registar contactos
 //empizan con / por estandar
@@ -11,13 +11,12 @@ router.post('/registrarTarjetas', function (req, res) {
     /*req lo que recibo y response lo que respondo */
     let body = req.body; 
     let nuevaTarjeta =  new Tarjeta({
-        // /Datos de Tarejeta/
-        
+        // /Datos de Tarejeta/        
         nombre : body.nombre,
         numTarjeta : body.numTarjeta,
         expiracion : body.expiracion,
         cvv : body.cvv,
-        tipoTarjeta : body.tipoTarjeta,
+        tipoTarjeta : body.tipoTarjeta
             
     });
 

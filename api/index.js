@@ -11,8 +11,6 @@ const categoriaRoute = require('./routes/categoria');
 const usuario_route = require('./routes/usuarios');
 const tarjeta_route = require('./routes/tarjetas.route');
 
-
-
 const app = express();
 app.use(cors());
 app.use(express.static(__dirname + "/public"));

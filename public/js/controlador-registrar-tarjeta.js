@@ -57,23 +57,18 @@ let registrar = () => {
    
 
 
-    let error = validar(nombre1, numTarjeta, expiracion, cvv , tipoTarjeta , expiracionFormateada, distrito, pass, telefono, nacimiento, correo, identificacion, nombreComercial, nombreFantasia, );
+    let error = validar(nombre1, numTarjeta, expiracion, cvv , tipoTarjeta , expiracionFormateada );
 
     if (error == false) {       
 
-        registrarLibreria(nombre1, numTarjeta, expiracion, cvv , tipoTarjeta , expiracionFormateada, distrito, pass, telefono, nacimiento, correo, identificacion, nombreComercial, nombreFantasia,);
-        console.log(`Primer Nombre: ${nombre1}`);
-        console.log(`Segundo Nombre: ${nombre2}`);
-        console.log(`Primer Apellido: ${apellido1}`);
-        console.log(`Segundo Apellido: ${apellido2}`);
-        console.log(`Identificacion: ${identificacion}`);
-        console.log(`Su fecha de nacimiento es:  ${nacimiento}`)
-        console.log(`Correo: ${correo}`);
-        console.log(`Nombre Comercial: ${nombreComercial}`);
-        console.log(`Nombre de Fantasia: ${nombreFantasia}`);
-        console.log(`Telefono: ${telefono}`);
-        console.log(`Su direeccion es: ${direccion}, ${provincia}, ${canton}, ${distrito}`);
-        console.log(`Contrasea: ${pass}`);
+        registrarLibreria(nombre1, numTarjeta, expiracion, cvv , tipoTarjeta , expiracionFormateada);
+        console.log(`Nombre: ${nombre1}`);
+        console.log(`Numero de tarjeta: ${numTarjeta}`);
+        console.log(`Expiracion: ${expiracion}`);
+        console.log(`Numero CVV: ${cvv}`);
+        console.log(`Tipo de Tarjeta: ${tipoTarjeta}`);
+        console.log(`Expiracion formateada:  ${expiracionFormateada}`)
+       
         Swal.fire({
             type: 'success',
             title: successMessage,
