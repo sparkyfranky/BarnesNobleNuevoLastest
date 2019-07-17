@@ -14,7 +14,16 @@ let registrarTarjeta = (pnombre1, ptipoTarjeta, pnumTarjeta, pexpiracion, pcvv )
     });
 };
 
-
+var obtenerTarjeta = async () => {
+    var response = await fetch('http://localhost:4000/api/listarTarjetas', {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json;charset=UTF-8',
+        }
+    });
+    var result = await response.json();
+    return result.listaTarjetas;
+}
 
 
 
@@ -32,16 +41,7 @@ let registrarTarjeta = (pnombre1, ptipoTarjeta, pnumTarjeta, pexpiracion, pcvv )
 //     return result;
 // }
 
-var obtenerTarjeta = async () => {
-    var response = await fetch('http://localhost:4000/api/listarTarjetas', {
-        method: "GET",
-        headers: {
-            'Content-Type': 'application/json;charset=UTF-8',
-        }
-    });
-    var result = await response.json();
-    return result.listaTarjetas;
-}
+
 
 // var editarGenero = async(tarjeta,id) => {
 //     var response = await fetch('http://localhost:4000/api/editar/' + id, {
