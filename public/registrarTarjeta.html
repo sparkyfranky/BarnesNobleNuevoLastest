@@ -45,15 +45,24 @@
         </nav>
     </header>
     <main>
-        <section class="center" id="form_registrarLib">
+        <section class="center" id="form_registrarTar">
             <div>
                 <h2>Registrar administrador de la librería</h2>
             </div>
             <form>
                 <div>
                     <label for="">Nombre en la tarjeta</label>
-                    <input type="Campo Requerido" id="txt-nombre">
+                    <input placeholder="Campo Requerido" type="text" id="txt-nombre">
                 </div>
+            <div>
+                <label for="">Tipo de Tarjeta</label>
+                <select id="slt-tipoTarjeta">
+                    <option value="seleccion">--Selecione--</option>
+                    <option value="Visa">visa</option>
+                    <option value="MasterCard">Master Card</option>
+                    <option value="Amex">American Express</option>
+                </select>
+            </div>
                 <div>
                     <label for="">Numero de tajeta</label>
                     <input placeholder="Campo Requerido" type="number" id="nmr-tarjeta">
@@ -65,23 +74,10 @@
                 <div>
                     <label for="">Codigo CVV</label>
                     <input placeholder="Campo Requerido" type="number" id="nmr-cvv">
-                </div>
-
-                <div>
-                    <label for="">Tipo de Tarjeta</label>
-                    <select id="slt-tipoTarjeta">
-                        <option value="seleccion">--Selecione--</option>
-                        <option value="Nacional">visa</option>
-                        <option value="Estranjero">Master Card</option>
-                        <option value="Estranjero">American Express</option>
-                    </select>
-
-           
-
+                </div>              
+                <button class="btn-formulario" type="button" id="btn-registrar">Registrar Tarjeta</button>
             </form>
-             <button class="btn-formulario" type="button" id="btn-registrar">Registrar Tarjeta</button>
             </div>
-
         </section>
     </main>
     <footer>
@@ -111,10 +107,10 @@
             <h3> ⓒ 2019 Valhalla</h3>
         </div>
     </footer>
-  <script src="js/menu.js"></script>
+    <script src="js/menu.js"></script>
     <script src="js/controlador-registrar-tarjeta.js"></script>
     <!-- <script src="js/cerrarSesion.js"></script> -->
-  
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 </body>
 

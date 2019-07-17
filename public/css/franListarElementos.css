@@ -313,35 +313,40 @@ footer {
          background: #B53471;
        }
        
-       /* Estilos de formulario de registro de libreria */
-   #form_registrarLib{
+       /* Estilos de formulario de registro de tarjeta */
+   /* #form_registrarTar{
+        
+       } */
+   
+   #form_registrarTar form{
          border: 1px solid #f6c249;
-       }
-   
-   #form_registrarLib form{
          background: #faf8dd;
-             }
+         height: 300px;
+         padding: 20px;
+         }
+
+    #slt-tipoTarjeta {
+        width: 185px;
+        }          
    
-   #form_registrarLib h2{
-         color: white;
+   #form_registrarTar h2{
+       color: white;
        font-family: Arial;
        font-size: 20px;
        background: #80d1d3;
        height: 40px;
        vertical-align: text-bottom;
-        border: 1px solid #f6c249;
-        padding: 5px;
-    
-        
-         }
-   #form_registrarLib label{
+       border: 1px solid #f6c249;
+       padding: 5px;        
+      }
+   #form_registrarTar label{
             display: inline-block;
             width: 200px;
             text-align: right;
             vertical-align:top;
             color: #315c74;
          }
-   #form_registrarLib input {
+   #form_registrarTar input {
          display: inline-block;
          width: 180px;
          height: 30px;
@@ -351,7 +356,7 @@ footer {
          outline: none;
    }
    
-   #form_registrarLib input[type=date] {
+   #form_registrarTar input[type=date] {
          width: 179px;
    
       }
@@ -368,10 +373,10 @@ footer {
     }
 
       
-   #form_registrarLib input:focus{
+   #form_registrarTar input:focus{
          background: #ecf0f1;
       }
-   #form_registrarLib form div{
+   #form_registrarTar form div{
          margin-bottom: 15px;
       }
    

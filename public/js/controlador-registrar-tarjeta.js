@@ -25,20 +25,20 @@ let validar = (pnombre1, pnumTarjeta, pexpiracion, pcvv, ptipoTarjeta ) => {
         inputNumTarjeta.classList.remove('input_error');
     }
 
-    if ( pexpiracion == '') {
+    if ( pexpiracion == 'Invalid Date') {
         error = true;
         inputExpiracion.classList.add('input_error');  
     } else {
         inputExpiracion.classList.remove('input_error');
     }
 
-    if (pcvv == 'Invalid Date') {
+    if (pcvv == '') {
         error = true;
         inputCVV.classList.add('input_error');
     } else {
         inputCVV.classList.remove('input_error');
     }
-    if (ptipoTarjeta == '') {
+    if (ptipoTarjeta == '--Selection--') {
         error = true;
         inputTipoTarjeta.classList.add('input_error');
     } else {
