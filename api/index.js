@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const generoRoute = require('./routes/genero');
 const categoriaRoute = require('./routes/categoria');
 const usuario_route = require('./routes/usuarios');
-const tarjeta_route = require('./routes/tarjetas.route');
+const tarjeta_route = require('./routes/tarjetas');
 
 
 

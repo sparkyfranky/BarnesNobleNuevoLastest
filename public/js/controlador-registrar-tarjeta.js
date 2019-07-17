@@ -56,12 +56,10 @@ let registrar = () => {
     let expiracion = new Date(inputExpiracion.value);
     let expiracionFormateada = Number(expiracion.getUTCMonth() + 1) + ' - ' + Number(expiracion.getUTCDate()) + " - " + expiracion.getFullYear();
    
-
-
-    let error = validar(nombre1, numTarjeta, expiracion, cvv , tipoTarjeta , expiracion, );
+    let error = validar(nombre1, numTarjeta, expiracion, cvv , tipoTarjeta , expiracion );
 
     if (error == false) {    
-        registrarTajeta(nombre1, numTarjeta, expiracion, cvv , tipoTarjeta , expiracion );
+        registrarTarjeta(nombre1, numTarjeta, expiracionFormateada, cvv , tipoTarjeta , expiracion );
 
         console.log(`Nombre: ${nombre1}`);
         console.log(`Numero de Tarjeta: ${numTarjeta}`);
