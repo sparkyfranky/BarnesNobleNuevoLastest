@@ -18,7 +18,6 @@ router.post('/registrarTarjeta', function (req, res) {
         expiracion : body.expiracion,
         cvv : body.cvv,
         tipoTarjeta : body.tipoTarjeta,
-            
     });
 
     nuevaTarjeta.save(
@@ -56,7 +55,6 @@ router.get('/listarTarjetas', function (req, res) {
     });
 });
  
-
 module.exports = router;
 
 //localhosta:3000/api/registrarUsuario/
