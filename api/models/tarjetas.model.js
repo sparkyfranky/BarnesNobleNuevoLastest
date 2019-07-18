@@ -3,7 +3,7 @@
 const mongoose = require('mongoose');
 //Esquema de tarjeta//
 
-let tarjetas_schema = new mongoose.Schema({
+let tarjeta_schema = new mongoose.Schema({
 
 /*Datos Generales*/
 nombre1 : {type: String, required : true, unique : false},
@@ -14,4 +14,4 @@ cvv : {type: Number, required : true, unique : false},
 
 });
 
-module.exports = mongoose.model('Tarjeta', tarjetas_schema); 
+module.exports = mongoose.model('Tarjeta', tarjeta_schema); 
