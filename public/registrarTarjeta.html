@@ -56,8 +56,8 @@
                 </div>
             <div>
                 <label for="">Tipo de Tarjeta</label>
-                <select id="slt-tipoTarjeta">
-                    <option value="seleccion">--Selecione--</option>
+                <select  id="slt-tipoTarjeta" required>
+                    <option value="">--Selecione--</option>
                     <option value="Visa">visa</option>
                     <option value="MasterCard">Master Card</option>
                     <option value="Amex">American Express</option>
@@ -107,11 +107,12 @@
             <h3> ⓒ 2019 Valhalla</h3>
         </div>
     </footer>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/servicioTarjeta.js"></script>    
     <script src="js/menu.js"></script>
     <script src="js/controlador-registrar-tarjeta.js"></script>
     <!-- <script src="js/cerrarSesion.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 </body>
+
 </html>

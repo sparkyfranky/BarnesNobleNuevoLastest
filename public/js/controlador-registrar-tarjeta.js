@@ -38,7 +38,7 @@ let validar = (pnombre1, pnumTarjeta, pexpiracion, pcvv, ptipoTarjeta ) => {
     } else {
         inputCVV.classList.remove('input_error');
     }
-    if (ptipoTarjeta == '--Selection--') {
+    if (ptipoTarjeta == '') {
         error = true;
         inputTipoTarjeta.classList.add('input_error');
     } else {

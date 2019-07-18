@@ -1,7 +1,7 @@
 let registrarTarjeta = (pnombre1, ptipoTarjeta, pnumTarjeta, pexpiracion, pcvv ) => {
     axios({
         method: 'post',
-        url: 'http://localhost:4000/api/registrarTarjeta',
+        url: 'http://localhost:3000/api/registrarTarjeta',
         responseType: 'json',
         data: {
             nombre1: pnombre1,
