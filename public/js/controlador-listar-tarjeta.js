@@ -13,11 +13,11 @@ let mostrar_tabla = async() => {
 
     for (let i = 0; i < listaTarjetas.length; i++) {
         let fila = tbody.insertRow();
-        fila.insertCell().innerHTML = listaTarjetas[i]['Nombre'];
-        fila.insertCell().innerHTML = listaTarjetas[i]['Tipo de Tarjeta'];
-        fila.insertCell().innerHTML = listaTarjetas[i]['Numero de Tarjeta'];
-        fila.insertCell().innerHTML = listaTarjetas[i]['Expiration'];
-        fila.insertCell().innerHTML = listaTarjetas[i]['Codigo CVV'];
+        fila.insertCell().innerHTML = listaTarjetas[i]['nombre1'];
+        fila.insertCell().innerHTML = listaTarjetas[i]['tipoTarjeta'];
+        fila.insertCell().innerHTML = listaTarjetas[i]['numTarjeta'];
+        fila.insertCell().innerHTML = listaTarjetas[i]['expiracion'];
+        fila.insertCell().innerHTML = listaTarjetas[i]['cvv'];
     }
 
 
@@ -30,13 +30,13 @@ let filtrar_tabla = async() => {
 
 
     for (let i = 0; i < listaTarjetas.length; i++) {
-        if (listaTarjetas[i]['nombre'].toLowerCase().includes(filtro) || listaTarjetas[i]['correo'].toLowerCase().includes(filtro)) {
+        if (listaTarjetas[i]['Nombre'].toLowerCase().includes(filtro) || listaTarjetas[i]['Tipo de Tarjeta'].toLowerCase().includes(filtro)) {
             let fila = tbody.insertRow();
-            fila.insertCell().innerHTML = listaTarjetas[i]['Nombre'];
-            fila.insertCell().innerHTML = listaTarjetas[i]['Tipo de Tarjeta'];
-            fila.insertCell().innerHTML = listaTarjetas[i]['Numero de Tarjeta'];
-            fila.insertCell().innerHTML = listaTarjetas[i]['Expiration'];
-            fila.insertCell().innerHTML = listaTarjetas[i]['Codigo CVV'];
+            fila.insertCell().innerHTML = listaTarjetas[i]['nombre1'];
+            fila.insertCell().innerHTML = listaTarjetas[i]['tipoTarjeta'];
+            fila.insertCell().innerHTML = listaTarjetas[i]['numTarjeta'];
+            fila.insertCell().innerHTML = listaTarjetas[i]['expiracion'];
+            fila.insertCell().innerHTML = listaTarjetas[i]['cvv'];
         }
 
     }
