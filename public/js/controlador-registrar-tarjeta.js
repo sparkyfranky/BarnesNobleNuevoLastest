@@ -50,21 +50,21 @@ let validar = (pnombre1, pnumTarjeta, pexpiracion, pcvv, ptipoTarjeta ) => {
 
 let registrar = () => {
     let nombre1 = inputNombre1.value;
-    let numTarjeta = inputNumTarjeta.value;
-    let cvv = inputCVV.value;
     let tipoTarjeta = inputTipoTarjeta.value;
+    let numTarjeta = inputNumTarjeta.value;
+    let cvv = inputCVV.value;    
     let expiracion = new Date(inputExpiracion.value);
     let expiracionFormateada = Number(expiracion.getUTCMonth() + 1) + ' - ' + Number(expiracion.getUTCDate()) + " - " + expiracion.getFullYear();
    
-    let error = validar(nombre1, numTarjeta, expiracion, cvv , tipoTarjeta , expiracion );
+    let error = validar(nombre1,tipoTarjeta,  numTarjeta, expiracion, cvv  , expiracion );
 
     if (error == false) {    
-        registrarTarjeta(nombre1, numTarjeta, expiracionFormateada, cvv , tipoTarjeta , expiracion );
+        registrarTarjeta(nombre1, numTarjeta, expiracionFormateada, cvv ,  expiracion );
 
         console.log(`Nombre: ${nombre1}`);
+        console.log(`Tipo de tarjeta ${tipoTarjeta}`);
         console.log(`Numero de Tarjeta: ${numTarjeta}`);
         console.log(`Coodigo CVV: ${cvv}`);
-        console.log(`Tipo de tarjeta ${tipoTarjeta}`);
         console.log(`Expiracion:  ${expiracionFormateada}`)
         
         Swal.fire({
