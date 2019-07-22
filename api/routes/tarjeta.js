@@ -15,9 +15,11 @@ router.post('/registrarTarjeta', function (req, res) {
         
         nombre1 : body.nombre1,
         numTarjeta : body.numTarjeta,
-        expiracion : body.expiracion,
-        cvv : body.cvv,
         tipoTarjeta : body.tipoTarjeta,
+        expiracionMM : body.expiracionMM,
+        expiracionYY : body.expiracionYY,
+        cvv : body.cvv,
+        
     });
 
     nuevaTarjeta.save(

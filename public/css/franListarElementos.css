@@ -371,7 +371,9 @@ footer {
     #slt-tipoID{
       width: 180px;
     }
-
+    #slt-expiracionMM{
+      width: 140px;
+    }
       
    #form_registrarTar input:focus{
          background: #ecf0f1;

@@ -1,4 +1,6 @@
-let registrarTarjeta = (pnombre1, ptipoTarjeta, pnumTarjeta, pexpiracion, pcvv ) => {
+'use strict';
+
+let registrarTarjeta = (pnombre1, ptipoTarjeta, pnumTarjeta, pexpiracionMM, pexpiracionYY, pcvv ) => {
     axios({
         method: 'post',
         url: 'http://localhost:4000/api/registrarTarjeta',
@@ -7,13 +9,13 @@ let registrarTarjeta = (pnombre1, ptipoTarjeta, pnumTarjeta, pexpiracion, pcvv )
             nombre1: pnombre1,
             tipoTarjeta: ptipoTarjeta,
             numTarjeta: pnumTarjeta,
-            expiracion: pexpiracion,
+            expiracionMM: pexpiracionMM,
+            expiracionYY: pexpiracionYY,
             cvv: pcvv
             
         }
     });
 };
-
 
 let obtenerTarjetas  = async () => {
     try{ 
@@ -29,22 +31,6 @@ let obtenerTarjetas  = async () => {
         console.log(error);
     } 
 };
-
-
-// var obtenerTarjeta = async () => {
-//     var response = await fetch('http://localhost:4000/api/listarTarjetas', {
-//         method: 'get',
-//         headers: {
-//             'Content-Type': 'application/json;charset=UTF-8',
-//         }
-//     });
-    
-//     return result.listaTarjetas;
-// }
-
-
-
-
 
 
 // var registrarTarjeta = async (pnombre1, pnumTarjeta, pexpiracion, pcvv, ptipoTarjeta ) => {

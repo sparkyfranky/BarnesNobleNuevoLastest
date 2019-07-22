@@ -35,26 +35,46 @@
         <nav class="menuIzquierdo">
             <ul class="menu">
                 <li><a href="#">Mi perfil</a></li>
-                <li><a href="genero.html">Géneros</a></li>
-                <li><a href="categoria.html">Categorías</a></li>
-                <li><a href="#">Reportes</a></li>
-                <li><a href="#">Bitácora</a></li>
-                <li><a href="#">Usuarios</a></li>
-                <li><a href="#">Librerías</a></li>
+                <li><a href="registrarTarjeta.html">Nueva Tarjeta</a></li>
+                <li><a href="listarTarjetas.html">Mis Tarjetas</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="center" id="form_registrarTar">
-            <div>
-                <h2>lista de tarjetas</h2>
-                <table >
-                    <tbody Id='tbl_tarjetas'>
+        <section id='tbl_tarjetas'>
+            <div class="center">
+                <div class="busqueda">
+                    <input type="text" id="txt-filtro" name="buscar" placeholder="Buscar...." autocomplete="off"
+                        autocorrect="off">
+                    <button type="button" class="buscar"><i class="fa fa-search"></i><span>search</span></button>
+                </div>
+                <!-- <div class="crear-contenedor">
+                    <button type="button" class="material-blue" data-action="crear" id="crear-elemento"><i
+                            class="far fa-plus-circle" ></i><a href="registrarTarjeta.html">Añadir Tarjeta</a>
+                    </button>
+                </div> -->
+                <div class="center">
+                    <h2>lista de tarjetas</h2>
 
+                    <table Id='tbl_tarjetas'>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Número de Tarjeta</th>
+                                <th>Tipo de Tarjeta</th>
+                                <th>Mes de Expiración </th>
+                                <th>Año de Expiración </th>
+                                <th>Código CVV</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <button type="button">
+                        <a class="btn-formulario" type="button" id="btn-nuevaTarjeta" href="registrarTarjeta.html">Añadir Tarjeta</a>
+                    </button>
+                </div>
 
-                    </tbody>
-                </table>
-            </div>
         </section>
     </main>
     <footer>
@@ -85,8 +105,9 @@
         </div>
     </footer>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/tarjetas/servicioTarjeta.js"></script>
+    <script src="js/tarjetas/controlador-listar-tarjeta.js"></script>
     <script src="js/menu.js"></script>
-    <script src="js/controlador-listar-tarjeta.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <!-- <script src="js/cerrarSesion.js"></script> -->
 </body>

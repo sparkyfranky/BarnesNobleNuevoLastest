@@ -35,12 +35,9 @@
         <nav class="menuIzquierdo">
             <ul class="menu">
                 <li><a href="#">Mi perfil</a></li>
-                <li><a href="genero.html">Géneros</a></li>
-                <li><a href="categoria.html">Categorías</a></li>
-                <li><a href="#">Reportes</a></li>
-                <li><a href="#">Bitácora</a></li>
-                <li><a href="#">Usuarios</a></li>
-                <li><a href="#">Librerías</a></li>
+                <li><a href="#">Mi perfil</a></li>
+                <li><a href="registrarTarjeta.html">Nueva Tarjeta</a></li>
+                <li><a href="listarTarjetas.html">Mis Tarjetas</a></li>
             </ul>
         </nav>
     </header>
@@ -49,33 +46,56 @@
             <div>
                 <h2>Registrar Tarjeta Nueva</h2>
             </div>
-            <form>
+            <form id='registrarTarjeta'>
                 <div>
                     <label for="">Nombre en la tarjeta</label>
                     <input placeholder="Campo Requerido" type="text" id="txt-nombre">
                 </div>
-            <div>
-                <label for="">Tipo de Tarjeta</label>
-                <select  id="slt-tipoTarjeta" required>
-                    <option value="">--Selecione--</option>
-                    <option value="Visa">visa</option>
-                    <option value="MasterCard">Master Card</option>
-                    <option value="Amex">American Express</option>
-                </select>
-            </div>
+                <div>
+                    <label for="">Tipo de Tarjeta</label>
+                    <select id="slt-tipoTarjeta" required>
+                        <option value="">--Selecione--</option>
+                        <option value="Visa">Visa</option>
+                        <option value="MasterCard">Master Card</option>
+                        <option value="Amex">American Express</option>
+                    </select>
+                </div>
                 <div>
                     <label for="">Numero de tajeta</label>
                     <input placeholder="Campo Requerido" type="number" id="nmr-tarjeta">
                 </div>
                 <div>
-                    <label for="">Expiracion</label>
-                    <input placeholder="Campo Requerido" type="date" id="dt-expiracion">
+                    <label for="" id="dt-expiracion">Expiracion</label>
+                    <!-- <input type="date" id="dt-expiracion"> -->
+                    <select name='exMM' id='slt-expiracionMM' requied>
+                        <option value=''>Mes</option>
+                        <option value='01'>Enero</option>
+                        <option value='02'>Febrero</option>
+                        <option value='03'>Marzo</option>
+                        <option value='04'>Abril</option>
+                        <option value='05'>Mayo</option>
+                        <option value='06'>Junio</option>
+                        <option value='07'>Julio</option>
+                        <option value='08'>Agosto</option>
+                        <option value='09'>Septiembre</option>
+                        <option value='10'>Octubre</option>
+                        <option value='11'>Noviembre</option>
+                        <option value='12'>Diciembre</option>
+                    </select>
+                    <select name='exYY' id='slt-expiracionYY' required>
+                        <option value=''>Año</option>
+                        <option value='20'>2020</option>
+                        <option value='21'>2021</option>
+                        <option value='22'>2022</option>
+                        <option value='23'>2023</option>
+                        <option value='24'>2024</option>
+                    </select>
                 </div>
                 <div>
                     <label for="">Codigo CVV</label>
-                    <input placeholder="Campo Requerido" type="number" id="nmr-cvv">
-                </div>              
-                <button class="btn-formulario" type="button" id="btn-registrar">Registrar Tarjeta</button>
+                    <input placeholder="Campo Requerido" type="number" id="nmr-cvv"  >
+                </div>
+                <button class="btn-formulario" type="button" id="btn-registrar" >Registrar Tarjeta</button>
             </form>
             </div>
         </section>
@@ -108,12 +128,11 @@
         </div>
     </footer>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="js/controlador-registrar-tarjeta.js"></script>
-       <script src="js/servicioTarjeta.js"></script>    
+     <script src="js/tarjetas/servicioTarjeta.js"></script>
+    <script src="js/tarjetas/controlador-registrar-tarjeta.js"></script>   
     <script src="js/menu.js"></script>
-  
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-      <!-- <script src="js/cerrarSesion.js"></script> -->  
+    <!-- <script src="js/cerrarSesion.js"></script> -->
 </body>
 
 </html>
