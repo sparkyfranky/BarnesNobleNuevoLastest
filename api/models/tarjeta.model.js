@@ -12,7 +12,11 @@ numTarjeta : {type: Number, required : true, unique : false},
 expiracionMM : {type: String, required : true, unique : false},
 expiracionYY : {type: String, required : true, unique : false},
 cvv : {type: Number, required : true, unique : false},
-
+usuario: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Usuario',
+    require: true
+}
 });
 
 module.exports = mongoose.model('Tarjeta', tarjeta_schema); 
